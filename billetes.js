@@ -27,12 +27,15 @@ function hotTheLotery(cantidad) {
     billetes[4] = cantidad;
     //console.log(cantidad);
   }
+  if (cantidad > 0) {
+    billetes[4] = cantidad;
+    //console.log(cantidad);
+  }
 
   for (let i = 0; i < billetes.length; i++) {
-    let num;
-    num = billetes[i];
-    parseInt(numeroBilletes);
-    numeroBilletes = numeroBilletes + parseInt(num);
+    if (billetes[i]) {
+      numeroBilletes = numeroBilletes + parseInt(billetes[i]);
+    }
   }
   console.log(numeroBilletes);
 }
